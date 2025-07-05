@@ -10,6 +10,7 @@ const PasswordResetSuccess = () => {
         <p className="text-base text-gray-300 mb-6">
           You’ve successfully created a new password.<br /><strong className="font-bold">You can now log in.</strong>
         </p>
+        {/* Continue Button */}
         <Link to="/login">
           <button className="bg-[#1bd421] text-black py-3 px-6 border-none rounded-lg text-base cursor-pointer transition-colors duration-300 hover:bg-[#1eac25]">
             Continue

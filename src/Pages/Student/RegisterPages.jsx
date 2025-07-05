@@ -59,7 +59,6 @@ const RegisterPage = () => {
       {/* Navbar */}
       <nav className="w-full bg-[#2e2e2f] shadow-md fixed top-0 left-0 z-50">
         <div className="max-w-[1080px] mx-auto flex items-center gap-3 px-4 py-3 sm:px-6">
-          {/* Make sure to replace "" with your actual logo path */}
           <img src={""} alt="Logo" className="h-9" />
           <span className="text-white text-lg sm:text-xl font-bold">
             ClassTrack Pro
@@ -77,7 +76,6 @@ const RegisterPage = () => {
             <p className="text-center text-sm sm:text-base text-gray-300 -mt-1 mb-4">
               Create your account to get started
             </p>
-
             {/* Full Name */}
             <div>
               <label
@@ -102,7 +100,6 @@ const RegisterPage = () => {
                 <p className="text-red-500 text-xs mt-1">{errors.fullname}</p>
               )}
             </div>
-
             {/* Email */}
             <div>
               <label
@@ -127,7 +124,6 @@ const RegisterPage = () => {
                 <p className="text-red-500 text-xs mt-1">{errors.email}</p>
               )}
             </div>
-
             {/* Password */}
             <div>
               <label
@@ -152,7 +148,6 @@ const RegisterPage = () => {
                 <p className="text-red-500 text-xs mt-1">{errors.password}</p>
               )}
             </div>
-
             {/* Role */}
             <div>
               <label
@@ -182,7 +177,6 @@ const RegisterPage = () => {
                 <p className="text-red-500 text-xs mt-1">{errors.role}</p>
               )}
             </div>
-
             {/* Submit Button */}
             <button
               type="submit"
@@ -190,7 +184,6 @@ const RegisterPage = () => {
             >
               SIGN UP
             </button>
-
             {/* Already Have Account */}
             <p className="text-center text-sm text-gray-300 mt-2">
               Already have an account?{" "}
@@ -201,9 +194,9 @@ const RegisterPage = () => {
           </form>
         </div>
       </div>
-
       {/* Arrow Up Button */}
       <ArrowUps />
+      {/* Success Modal */}
       {showSuccessModal && <SuccessAccCreates />}
     </div>
   );

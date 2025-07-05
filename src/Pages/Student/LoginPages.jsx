@@ -54,7 +54,6 @@ const LoginPage = () => {
     <div className="min-h-screen bg-[#1c1c1e] text-white flex flex-col items-center font-sans">
       {/* Success Banner */}
       <LoginSuccessBanners show={showBanner} />
-
       {/* Navbar */}
       <nav className="w-full bg-[#2e2e2f] shadow-md fixed top-0 left-0 z-50">
         <div className="max-w-[1080px] mx-auto flex items-center gap-3 px-4 py-3 sm:px-6">
@@ -64,12 +63,10 @@ const LoginPage = () => {
           </span>
         </div>
       </nav>
-
       {/* Login Form */}
       <div className="w-full px-4 pt-36 pb-10 sm:pb-16 flex justify-center">
         <div className="w-full max-w-sm sm:max-w-md bg-[#2e2e2f] p-6 sm:p-10 rounded-xl shadow-lg">
           <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-            {/* Header */}
             <div className="flex items-center gap-4 justify-center mb-4">
               <i className="fas fa-lock text-3xl sm:text-4xl text-[#1bd421]" />
               <div>
@@ -81,7 +78,6 @@ const LoginPage = () => {
                 </p>
               </div>
             </div>
-
             {/* Email Input */}
             <div>
               <label
@@ -106,7 +102,6 @@ const LoginPage = () => {
                 <p className="text-red-500 text-xs mt-1">{errors.email}</p>
               )}
             </div>
-
             {/* Password Input */}
             <div>
               <label
@@ -131,7 +126,6 @@ const LoginPage = () => {
                 <p className="text-red-500 text-xs mt-1">{errors.password}</p>
               )}
             </div>
-
             {/* Forgot Password Link */}
             <div className="text-right">
               <Link
@@ -141,7 +135,6 @@ const LoginPage = () => {
                 Forgot password?
               </Link>
             </div>
-
             {/* Submit Button */}
             <button
               type="submit"
@@ -149,7 +142,6 @@ const LoginPage = () => {
             >
               SIGN IN
             </button>
-
             {/* Signup Link */}
             <p className="text-center text-sm text-gray-300 mt-2">
               Don't have an account?{" "}
@@ -158,7 +150,6 @@ const LoginPage = () => {
               </Link>
             </p>
           </form>
-
           {/* Scroll to Top Button */}
           <ArrowUps />
         </div>

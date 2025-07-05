@@ -15,7 +15,7 @@ const SuccessAccCreate = () => {
           Your account has been created<br />
           <strong className="font-bold">Successfully!</strong>
         </p>
-        {/* Changed <a> to <Link> and href to to */}
+        {/* Continue Button */}
         <Link to="/login">
           <button className="bg-[#1bd421] text-black py-3 px-6 rounded-lg text-base cursor-pointer transition-colors duration-300 hover:bg-[#1eac25]">
             Continue
