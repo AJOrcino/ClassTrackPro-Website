@@ -36,7 +36,7 @@ const TeamSection = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#1c1c1e] text-white py-16 px-4 sm:px-6 lg:px-8 font-sans">
+    <div className="min-h-screen bg-[#1c1c1e] text-white py-16 px-4 sm:px-6 lg:px-8 font-sans pt-20 pb-15 pr-14 pl-14">
       <Navs />
       <div className="max-w-6xl mx-auto text-center mb-12">
         <p className="text-[#1bd421] text-2xl sm:text-3xl  mt-3 uppercase font-bold mb-2">

@@ -45,9 +45,7 @@ const RegisterPages = () => {
     if (!formData.role) {
       newErrors.role = "Please select your role.";
     }
-
     setErrors(newErrors);
-
     if (Object.keys(newErrors).length === 0) {
       console.log("Form Submitted Successfully:", formData);
       setShowSuccessModal(true);
@@ -59,25 +57,19 @@ const RegisterPages = () => {
 
   return (
     <div className="min-h-screen bg-[#1c1c1e] text-white font-sans flex flex-col items-center">
-      {/* Registration Form Wrapper */}
+      {/* Registration Form*/}
       <div className="w-full px-4 pt-20 pb-10 sm:pb-16 flex justify-center">
-        {/* Form Container: Ginawang 'relative' para ma-position ang 'X' button sa loob nito */}
         <div className="bg-[#2e2e2f] p-6 sm:p-10 rounded-xl shadow-xl w-full max-w-sm sm:max-w-md relative">
-          {" "}
-          {/* DITO ANG PAGBABAGO: added 'relative' */}
           <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-            {/* "X" button: Ngayon ay 'absolute' sa loob ng 'relative' parent */}
+            {/* "X" button */}
             <button
               onClick={attemptClose}
-              type="button" // Added type="button" to prevent it from submitting the form
-              className="absolute top-4 right-4 text-red-500 text-2xl font-bold focus:outline-none" // Ayusin ang positioning
+              type="button" 
+              className="absolute top-4 right-4 text-red-500 text-2xl font-bold focus:outline-none" 
             >
               &times;
             </button>
-
             <h2 className="text-center text-xl sm:text-2xl font-bold mt-4">
-              {" "}
-              {/* Added mt-4 to push down from 'X' button */}
               ClassTrack Pro
             </h2>
             <p className="text-center text-sm sm:text-base text-gray-300 -mt-1 mb-4">
