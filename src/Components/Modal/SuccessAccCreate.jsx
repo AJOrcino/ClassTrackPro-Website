@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; 
+import React from "react";
+import { Link } from "react-router-dom";
 
 const SuccessAccCreate = () => {
   return (
@@ -12,7 +12,8 @@ const SuccessAccCreate = () => {
           &#10003;
         </div>
         <p className="text-base text-gray-300 mb-6">
-          Your account has been created<br />
+          Your account has been created
+          <br />
           <strong className="font-bold">Successfully!</strong>
         </p>
         {/* Continue Button */}

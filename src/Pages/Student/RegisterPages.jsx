@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ArrowUps from "../../Components/Button/ArrowUp";
 import SuccessAccCreates from "../../Components/Modal/SuccessAccCreate";
 
-const RegisterPage = () => {
+const RegisterPages = () => {
+  const navigate = useNavigate();
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
@@ -12,6 +13,10 @@ const RegisterPage = () => {
     password: "",
     role: "",
   });
+
+  const attemptClose = () => {
+    navigate("/login");
+  };
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -45,32 +50,34 @@ const RegisterPage = () => {
 
     if (Object.keys(newErrors).length === 0) {
       console.log("Form Submitted Successfully:", formData);
-
       setShowSuccessModal(true);
     } else {
       console.log("Form has errors, modal not shown:", newErrors);
-
       setShowSuccessModal(false);
     }
   };
 
   return (
     <div className="min-h-screen bg-[#1c1c1e] text-white font-sans flex flex-col items-center">
-      {/* Navbar */}
-      <nav className="w-full bg-[#2e2e2f] shadow-md fixed top-0 left-0 z-50">
-        <div className="max-w-[1080px] mx-auto flex items-center gap-3 px-4 py-3 sm:px-6">
-          <img src={""} alt="Logo" className="h-9" />
-          <span className="text-white text-lg sm:text-xl font-bold">
-            ClassTrack Pro
-          </span>
-        </div>
-      </nav>
-
-      {/* Registration Form */}
-      <div className="w-full px-4 pt-36 pb-10 sm:pb-16 flex justify-center">
-        <div className="bg-[#2e2e2f] p-6 sm:p-10 rounded-xl shadow-xl w-full max-w-sm sm:max-w-md">
+      {/* Registration Form Wrapper */}
+      <div className="w-full px-4 pt-20 pb-10 sm:pb-16 flex justify-center">
+        {/* Form Container: Ginawang 'relative' para ma-position ang 'X' button sa loob nito */}
+        <div className="bg-[#2e2e2f] p-6 sm:p-10 rounded-xl shadow-xl w-full max-w-sm sm:max-w-md relative">
+          {" "}
+          {/* DITO ANG PAGBABAGO: added 'relative' */}
           <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-            <h2 className="text-center text-xl sm:text-2xl font-bold">
+            {/* "X" button: Ngayon ay 'absolute' sa loob ng 'relative' parent */}
+            <button
+              onClick={attemptClose}
+              type="button" // Added type="button" to prevent it from submitting the form
+              className="absolute top-4 right-4 text-red-500 text-2xl font-bold focus:outline-none" // Ayusin ang positioning
+            >
+              &times;
+            </button>
+
+            <h2 className="text-center text-xl sm:text-2xl font-bold mt-4">
+              {" "}
+              {/* Added mt-4 to push down from 'X' button */}
               ClassTrack Pro
             </h2>
             <p className="text-center text-sm sm:text-base text-gray-300 -mt-1 mb-4">
@@ -180,7 +187,7 @@ const RegisterPage = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-[#1bd421] hover:bg-[#1eac25] text-white font-semibold py-2 rounded text-sm transition-colors duration-200"
+              className="w-full bg-[#1bd421] hover:bg-[#1eac25] text-black font-semibold py-2 rounded text-sm transition-colors duration-200"
             >
               SIGN UP
             </button>
@@ -202,4 +209,4 @@ const RegisterPage = () => {
   );
 };
 
-export default RegisterPage;
+export default RegisterPages;

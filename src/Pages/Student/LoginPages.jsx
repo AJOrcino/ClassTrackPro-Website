@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ArrowUps from "../../Components/Button/ArrowUp";
 import LoginSuccessBanners from "../../Components/Banner/LoginSuccessBanner";
+import Navs from "../../Components/Navbar/LoginNav/Navbars";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -34,16 +35,16 @@ const LoginPage = () => {
       newErrors.password = "Password must be at least 6 characters long.";
     }
 
-    setErrors(newErrors); 
+    setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
       console.log("Form Submitted Successfully:", formData);
-      setShowBanner(true); 
+      setShowBanner(true);
 
       setTimeout(() => {
-        setShowBanner(false); 
-        navigate("/not-found"); 
-      }, 3500); 
+        setShowBanner(false);
+        navigate("/not-found");
+      }, 3500);
     } else {
       console.log("Form has errors, banner not shown:", newErrors);
       setShowBanner(false);
@@ -55,14 +56,7 @@ const LoginPage = () => {
       {/* Success Banner */}
       <LoginSuccessBanners show={showBanner} />
       {/* Navbar */}
-      <nav className="w-full bg-[#2e2e2f] shadow-md fixed top-0 left-0 z-50">
-        <div className="max-w-[1080px] mx-auto flex items-center gap-3 px-4 py-3 sm:px-6">
-          <img src={""} alt="Logo" className="h-9" />
-          <span className="text-white text-lg sm:text-xl font-bold">
-            ClassTrack Pro
-          </span>
-        </div>
-      </nav>
+      <Navs />
       {/* Login Form */}
       <div className="w-full px-4 pt-36 pb-10 sm:pb-16 flex justify-center">
         <div className="w-full max-w-sm sm:max-w-md bg-[#2e2e2f] p-6 sm:p-10 rounded-xl shadow-lg">

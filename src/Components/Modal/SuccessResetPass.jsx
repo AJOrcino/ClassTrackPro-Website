@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 const PasswordResetSuccess = () => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
@@ -8,7 +8,9 @@ const PasswordResetSuccess = () => {
           &#10003;
         </div>
         <p className="text-base text-gray-300 mb-6">
-          You’ve successfully created a new password.<br /><strong className="font-bold">You can now log in.</strong>
+          You’ve successfully created a new password.
+          <br />
+          <strong className="font-bold">You can now log in.</strong>
         </p>
         {/* Continue Button */}
         <Link to="/login">

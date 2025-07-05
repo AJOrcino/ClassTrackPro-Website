@@ -6,7 +6,7 @@ const ResetPass = () => {
   const [newPass, setNewPass] = useState("");
   const [confirmPass, setConfirmPass] = useState("");
   const [showSuccessModal, setShowSuccessModal] = useState(false);
-  const [errors, setErrors] = useState({}); 
+  const [errors, setErrors] = useState({});
   const navigate = useNavigate();
 
   const attemptClose = () => {
@@ -29,7 +29,7 @@ const ResetPass = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newErrors = {}; 
+    const newErrors = {};
     if (!newPass) {
       newErrors.newPass = "Please enter your new password.";
     }
@@ -48,27 +48,24 @@ const ResetPass = () => {
         "Password must include uppercase, lowercase, and number or special character (min 6 chars).";
     }
 
-    setErrors(newErrors); 
+    setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      console.log("Password reset successful (sample data):", { newPass, confirmPass });
+      console.log("Password reset successful (sample data):", {
+        newPass,
+        confirmPass,
+      });
       setShowSuccessModal(true);
     } else {
       console.log("Form has validation errors:", newErrors);
-      setShowSuccessModal(false); 
+      setShowSuccessModal(false);
     }
   };
 
   return (
     <div className="min-h-screen bg-[#1e1e1e] text-white flex flex-col items-center justify-center font-sans px-4">
-      {/* Navbar */}
-      <nav className="w-full bg-[#2e2e2f] shadow-md fixed top-0 left-0 z-50">
-        <div className="max-w-[1080px] mx-auto flex items-center gap-3 px-5 py-3">
-          <img src={""} alt="Logo" className="h-9" />
-          <span className="text-white text-lg font-bold">ClassTrack Pro</span>
-        </div>
-      </nav>
-      <div className="relative mt-32 bg-[#2e2e2f] p-8 sm:p-10 rounded-xl shadow-lg w-full max-w-md mb-6">
+      {/* Reset Password Form */}
+      <div className="relative mt-20 bg-[#2e2e2f] p-8 sm:p-10 rounded-xl shadow-lg w-full max-w-md mb-6">
         <button
           onClick={attemptClose}
           className="absolute top-4 right-5 text-red-500 text-2xl font-bold focus:outline-none"
@@ -93,9 +90,11 @@ const ResetPass = () => {
               id="new-password"
               placeholder="************"
               value={newPass}
-              onChange={handleChangeNewPass} 
+              onChange={handleChangeNewPass}
               className={`w-full px-3 py-2 bg-[#1e1e1e] border rounded text-white focus:outline-none focus:ring-2 ${
-                errors.newPass ? "border-red-500" : "border-gray-600 focus:border-[#1bd421]"
+                errors.newPass
+                  ? "border-red-500"
+                  : "border-gray-600 focus:border-[#1bd421]"
               }`}
             />
             {errors.newPass && (
@@ -114,7 +113,9 @@ const ResetPass = () => {
               value={confirmPass}
               onChange={handleChangeConfirmPass}
               className={`w-full px-3 py-2 bg-[#1e1e1e] border rounded text-white focus:outline-none focus:ring-2 ${
-                errors.confirmPass ? "border-red-500" : "border-gray-600 focus:border-[#1bd421]"
+                errors.confirmPass
+                  ? "border-red-500"
+                  : "border-gray-600 focus:border-[#1bd421]"
               }`}
             />
             {errors.confirmPass && (
