@@ -124,7 +124,7 @@ const ResetPass = () => {
           {/* Submit Button*/}
           <button
             type="submit"
-            className="mt-4 py-2 bg-[#1bd421] text-black font-semibold rounded hover:bg-[#1eac25] transition-colors"
+            className="mt-4 py-2 bg-[#1bd421] text-black font-semibold text-sm rounded hover:bg-[#1eac25] transition-colors"
           >
             DONE
           </button>

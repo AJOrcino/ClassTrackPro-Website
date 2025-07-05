@@ -1,7 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom"; 
 import LoginPage from "../Pages/Student/LoginPages"; 
 import RegisterPage from "../Pages/Student/RegisterPages";
-import AdminSign from "../Pages/AdminPages";
 import ResetPassword from "../Pages/Student/ResetPass";
 import Unauthorized from "../Components/Error/Pages401";  
 import BadGate from "../Components/Error/Pages502";
@@ -18,7 +17,6 @@ function AppRouter() {
       <Route path="/" element={<Navigate to="/login" />} /> 
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
-      <Route path="/admin" element={<AdminSign />} />
       <Route path="/unauthorized" element={<Unauthorized />} />
       <Route path="/bad-gateway" element={<BadGate />} />
       <Route path="/forbidden" element={<Forbidden />} />
