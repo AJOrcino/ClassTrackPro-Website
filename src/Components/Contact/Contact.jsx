@@ -53,11 +53,9 @@ const Contact = () => {
   return (
     <>
       <div className="min-h-screen bg-[#1c1c1e] text-white flex flex-col items-center font-sans">
-        {/* Navs is already covering the top spacing */}
         <Navs />
         <div className="w-full px-4 pt-20 pb-10 sm:pb-16 flex justify-center">
           <div className="bg-[#2e2e2f] p-6 sm:p-10 rounded-xl shadow-xl w-full max-w-sm sm:max-w-md relative">
-            {/* The form needs a gap between its direct children to separate the input sections */}
             <form className="w-full flex flex-col gap-4" onSubmit={handleSubmit}>
               {/* "X" button */}
               <button
