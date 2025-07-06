@@ -2,12 +2,14 @@ import Navs from "../Navbar/LoginNav/Navbars";
 import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import SuccessContactMessages from "../Modal/SuccessContactMess";
+
 const Contact = () => {
   const navigate = useNavigate();
 
   const attemptClose = () => {
     navigate("/login");
   };
+
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
@@ -42,18 +44,21 @@ const Contact = () => {
     if (Object.keys(newErrors).length === 0) {
       console.log("Form Submitted Successfully:", formData);
       setShowSuccessModal(true);
-    }else {
+    } else {
       console.log("Form has errors, modal not shown:", newErrors);
       setShowSuccessModal(false);
     }
   };
+
   return (
     <>
       <div className="min-h-screen bg-[#1c1c1e] text-white flex flex-col items-center font-sans">
+        {/* Navs is already covering the top spacing */}
         <Navs />
         <div className="w-full px-4 pt-20 pb-10 sm:pb-16 flex justify-center">
           <div className="bg-[#2e2e2f] p-6 sm:p-10 rounded-xl shadow-xl w-full max-w-sm sm:max-w-md relative">
-            <form className="w-full flex-col gap-4 " onSubmit={handleSubmit}>
+            {/* The form needs a gap between its direct children to separate the input sections */}
+            <form className="w-full flex flex-col gap-4" onSubmit={handleSubmit}>
               {/* "X" button */}
               <button
                 onClick={attemptClose}
@@ -69,7 +74,7 @@ const Contact = () => {
               <div>
                 <label
                   htmlFor="fullname"
-                  className="block text-sm text-gray-300 mb-1"
+                  className="block text-sm text-gray-300 mb-1" /* Added mb-1 here */
                 >
                   Full Name
                 </label>
@@ -91,7 +96,7 @@ const Contact = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm text-gray-300 mb-1"
+                  className="block text-sm text-gray-300 mb-1" /* Added mb-1 here */
                 >
                   Email
                 </label>
@@ -99,7 +104,7 @@ const Contact = () => {
                   type="email"
                   id="email"
                   placeholder="Email address"
-                  className={`w-full px-3 py-2 bg-[#1e1e1e] border rounded text-white focus:outline-none focus:ring-2 ${errors.fullname ? "border-red-500" : " border-gray-600 focus:border-[#1bd421]"}`}
+                  className={`w-full px-3 py-2 bg-[#1e1e1e] border rounded text-white focus:outline-none focus:ring-2 ${errors.email ? "border-red-500" : " border-gray-600 focus:border-[#1bd421]"}`} /* Corrected error check for email */
                   value={formData.email}
                   onChange={handleChange}
                 />
@@ -113,7 +118,7 @@ const Contact = () => {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm text-gray-300 mb-1"
+                  className="block text-sm text-gray-300 mb-1" /* Added mb-1 here */
                 >
                   Message
                 </label>
@@ -137,14 +142,14 @@ const Contact = () => {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-[#1bd421] hover:bg-[#1eac25] text-black font-semibold py-2 rounded text-sm transition-colors duration-200"
+                className="w-full bg-[#1bd421] hover:bg-[#1eac25] text-black font-semibold py-2 rounded text-sm transition-colors duration-200 mt-4"
               >
                 MESSAGE SUBMIT
               </button>
             </form>
           </div>
         </div>
-        {/* Succcess Modal */}
+        {/* Success Modal */}
         {showSuccessModal && <SuccessContactMessages />}
       </div>
     </>
