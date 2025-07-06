@@ -72,7 +72,7 @@ const Contact = () => {
               <div>
                 <label
                   htmlFor="fullname"
-                  className="block text-sm text-gray-300 mb-1" /* Added mb-1 here */
+                  className="block text-sm text-gray-300 mb-1" 
                 >
                   Full Name
                 </label>
@@ -94,7 +94,7 @@ const Contact = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm text-gray-300 mb-1" /* Added mb-1 here */
+                  className="block text-sm text-gray-300 mb-1" 
                 >
                   Email
                 </label>
@@ -116,7 +116,7 @@ const Contact = () => {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm text-gray-300 mb-1" /* Added mb-1 here */
+                  className="block text-sm text-gray-300 mb-1" 
                 >
                   Message
                 </label>
