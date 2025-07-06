@@ -124,7 +124,7 @@ const LoginPage = () => {
             <div className="text-right">
               <Link
                 to="/reset-password"
-                className="text-[#1bd421] text-sm hover:underline"
+                className="text-[#1bd421] text-sm no-underline"
               >
                 Forgot password?
               </Link>
@@ -139,7 +139,7 @@ const LoginPage = () => {
             {/* Signup Link */}
             <p className="text-center text-sm text-gray-300 mt-2">
               Don't have an account?{" "}
-              <Link to="/register" className="text-[#1bd421] hover:underline">
+              <Link to="/register" className="text-[#1bd421] no-underline">
                 Sign Up
               </Link>
             </p>

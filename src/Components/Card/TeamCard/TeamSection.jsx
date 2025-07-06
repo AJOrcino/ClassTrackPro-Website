@@ -12,17 +12,24 @@ const TeamSection = () => {
       position: "",
       contribution: "",
       imageUrl: "/images/dany-bailey.jpg",
-      socialLinks: { github: "#", linkedin: "#", facebook: "#" },
+      socialLinks: {
+        github: "#",
+        linkedin: "#",
+        facebook: "https://www.facebook.com/aloconjacob26",
+      },
     },
     {
       id: 2,
       name: "Allen Jefferson C. Orcino",
       memberRole: "Member",
       position: "Fullstack Developer",
-      contribution:
-        "For the Manage and Development of the Frontend and Backend of the application.",
+      contribution: "",
       imageUrl: "/images/lucy-carter.jpg",
-      socialLinks: { github: "#", linkedin: "#", facebook: "#" },
+      socialLinks: {
+        github: "https://github.com/AJOrcino",
+        linkedin: "#",
+        facebook: "#",
+      },
     },
     {
       id: 3,
@@ -31,7 +38,11 @@ const TeamSection = () => {
       position: "Frontend Developer",
       contribution: "",
       imageUrl: "/images/jade-bradley.jpg",
-      socialLinks: { github: "#", linkedin: "#", facebook: "#" },
+      socialLinks: {
+        github: "https://github.com/Lemuel8114",
+        linkedin: "#",
+        facebook: "https://www.facebook.com/doblada.lemuel",
+      },
     },
   ];
 

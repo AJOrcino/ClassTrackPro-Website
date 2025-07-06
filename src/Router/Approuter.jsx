@@ -11,6 +11,7 @@ import SuccessAccCreates from "../Components/Modal/SuccessAccCreate";
 import SuccessResetPasswords from "../Components/Modal/SuccessResetPass";
 import TeamSections from "../Components/Card/TeamCard/TeamSection";
 import TeamMembers from "../Components/Card/TeamCard/TeamMemberCard";
+import Contacts from "../Components/Contact/Contact";
 import "../index.css";
 
 function AppRouter() {
@@ -32,6 +33,7 @@ function AppRouter() {
       />
       <Route path="/team" element={<TeamSections />} />
       <Route path="/team-members" element={<TeamMembers />} />
+      <Route path ="/contact" element={<Contacts />} />
     </Routes>
   );
 }

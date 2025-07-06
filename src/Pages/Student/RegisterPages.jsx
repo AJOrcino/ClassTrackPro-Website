@@ -186,7 +186,7 @@ const RegisterPages = () => {
             {/* Already Have Account */}
             <p className="text-center text-sm text-gray-300 mt-2">
               Already have an account?{" "}
-              <Link to="/login" className="text-[#1bd421] hover:underline">
+              <Link to="/login" className="text-[#1bd421] no-underline">
                 Sign In
               </Link>
             </p>

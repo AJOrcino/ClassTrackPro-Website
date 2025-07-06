@@ -10,7 +10,7 @@ const TeamMemberCard = ({
 }) => {
   return (
     <div className="bg-[#2e2e2f] rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row items-center p-4">
-      <div className="flex-shrink-0 w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full overflow-hidden bg-gray-700 mb-4 md:mb-0 md:mr-6">
+      <div className="flex-shrink-0 w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-lg overflow-hidden bg-gray-700 mb-4 md:mb-0 md:mr-6">
         {/* Profile Picture */}
         <img
           src={imageUrl || ""}
